@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="tttttesster.com"></a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulation!!</title>
+    <style>
+        /* Base Setup */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace; /* Pixel-like font */
+            background-color: #a0d8ef; /* Sky Blue */
+        }
+
+        /* Pixel Garden Background */
+        .garden {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 30%;
+            background: 
+                /* Pixelated Grass/Bush Pattern */
+                linear-gradient(45deg, #1e5a9c 25%, transparent 25%) -10px 0,
+                linear-gradient(-45deg, #1e5a9c 25%, transparent 25%) -10px 0,
+                linear-gradient(45deg, transparent 75%, #1e5a9c 75%),
+                linear-gradient(-45deg, transparent 75%, #1e5a9c 75%);
+            background-size: 20px 20px;
+            background-color: #2a75bb; /* Darker blue garden base */
+            z-index: 1;
+        }
+
+        /* Center Content */
+        .container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #ffffff;
+            text-shadow: 4px 4px 0px #1e5a9c;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 70px;
+        }
+
+        /* Pixel Cake */
+        .cake {
+            width: 100px;
+            height: 60px;
+            background: #ffffff; /* Cake body - White */
+            position: relative;
+            box-shadow: 
+                0 10px 0 #1e5a9c, /* Bottom Shadow */
+                -10px 0 0 #ffffff, 10px 0 0 #ffffff; /* Side extension */
+        }
+        
+        .cake::before { /* Frosting/Drip */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 120px;
+            height: 20px;
+            background: #efa0a0;
+            box-shadow: 0 10px 0 #C52233;
+        }
+
+        .candle {
+            position: absolute;
+            top: -40px;
+            left: 45px;
+            width: 10px;
+            height: 30px;
+            background: #ffffff;
+            border: 2px solid #1e5a9c;
+        }
+
+        .flame {
+            position: absolute;
+            top: -55px;
+            left: 48px;
+            width: 8px;
+            height: 12px;
+            background: #ffcc00;
+            animation: flicker 0.2s infinite;
+        }
+
+        @keyframes flicker {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2) translateY(-2px); }
+            100% { transform: scale(1); }
+        }
+
+        /* Animated Surprise Strands (Confetti) */
+        .strand {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        /* Generating Multiple Strands */
+        .s1 { left: 10%; background: #ffffff; animation-duration: 4s; }
+        .s2 { left: 30%; background: #1e5a9c; animation-duration: 6s; }
+        .s3 { left: 50%; background: #ffffff; animation-duration: 5s; }
+        .s4 { left: 70%; background: #1e5a9c; animation-duration: 7s; }
+        .s5 { left: 90%; background: #ffffff; animation-duration: 3s; }
+
+    </style>
+</head>
+<body>
+
+    <div class="garden"></div>
+
+    <div class="container">
+        <h1 style="font-family: 'Times New Roman', Times, serif;">Congratulations! You're officially gay!</h1>
+        
+        <div class="cake">
+            <div class="candle"></div>
+            <div class="flame"></div>
+        </div>
+    </div>
+
+<!-- Surprise Strands -->
+    <div class="strand s1"></div>
+    <div class="strand s2"></div>
+    <div class="strand s3"></div>
+    <div class="strand s4"></div>
+    <div class="strand s5"></div>
+
+</body>
+</html>
